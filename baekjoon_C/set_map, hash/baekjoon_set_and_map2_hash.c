@@ -20,7 +20,7 @@ struct node* createNode(int key, char* value) {
 	struct node* newNode;
 	newNode = (struct node*)malloc(sizeof(struct node));
 	newNode->key = key;
-	newNode->value = value;
+	newNode->value = value;    // strdup를 통해 메모리 공간 할당해 주어야 함, 중복 포인터 지정 위험 존재
 	newNode->next = NULL;
 	newNode->previous = NULL;
 	return newNode;
