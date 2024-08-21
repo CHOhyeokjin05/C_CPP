@@ -47,11 +47,9 @@ int main(){
         scanf("%s", dic[i].name);
         dic[i].n = i + 1;
     }
-
+    
     list* dic_i = (list*)malloc(sizeof(list) * n);
-    for(int i=0; i<n; i++){
-        dic_i[i] = dic[i];
-    }
+    memcpy(dic_i, dic, sizeof(list) * n);
 
     qsort(dic, n, sizeof(list), compare);
 
